@@ -1,0 +1,166 @@
+// https://www.npmjs.com/package/node-sass
+@import "normalize";
+
+$baseThemeColor: #78BF8B;
+$baseTextColor: mix($baseThemeColor, #666, 20%);
+$baseSubColor: mix($baseThemeColor, #ccc, 30%);;
+
+a {
+  color: $baseTextColor;
+  text-decoration: none;
+
+  &:active, &.active {
+    color: $baseThemeColor;
+  }
+}
+
+* {
+  font-family: 'Work Sans', sans-serif;
+}
+
+ins {
+  text-decoration: none;
+}
+
+.body_content {
+  height: 100%;
+  box-shadow: 0 0 8px 1px rgba(0,0,0,0.2);
+  width: 1250px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+header {
+  background-color: #F0F7F2;
+  padding: 15px 40px;
+}
+
+.nav_wrapper {
+  width: 40%;
+  padding: 30px 0;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 18px;
+
+  .nav_left {
+    float: left;
+  }
+
+  .nav_right {
+    float: right;
+  }
+}
+
+.carousel {
+  height: 800px;
+  border-top: 3px solid $baseThemeColor;
+  border-bottom: 3px solid $baseThemeColor;
+  background-image: url("sample1.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.welcome_wrapper {
+  overflow: hidden;
+  outline: 1px dashed gray;
+  padding: 100px 70px;
+}
+.welcome_image {
+  float: left;
+  width: 50%;
+  text-align: center;
+
+  img {
+    display: inline-block;
+    width: 95%;
+    border-radius: 3px;
+    border: 1px solid $baseTextColor;
+    padding: 10px;
+  }
+}
+
+.welcome_content {
+  float: left;
+  padding-left: 30px;
+  width: 45%;
+
+  .welcome_title {
+    font-family: 'Philosopher', sans-serif;
+    color: $baseThemeColor;
+    font-size: 40px;
+    font-weight: 400;
+  }
+  .welcome_body {
+    margin-top: 15px;
+    overflow: hidden;
+    color: $baseTextColor;
+    line-height: 1.6;
+    font-weight: 300;
+
+    .welcome_text {
+      min-height: 50px;
+
+      .initial {
+        float: left;
+        width: 45px;
+        height: 45px;
+        border-radius: 100px;
+        background-color: $baseSubColor;
+        font-size: 30px;
+        text-decoration: none;
+        color: white;
+        margin-right: 10px;
+        margin-bottom: 4px;
+        i {
+          font-weight: 700;
+          font-family: 'Philosopher', sans-serif;
+          float: left;
+          margin-left: 10px;
+          margin-top: -2px;
+        }
+      }
+    }
+
+    .welcome_bullets {
+      margin: 20px 0 0 0;
+      padding: 2px;
+
+      li {
+        list-style-type: none;
+        padding: 2px 0;
+        padding-left: 30px;
+        position: relative;
+
+        ins {
+          position: absolute;
+          top: 3px;
+          left: 15px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .welcome_schedule {
+      float: left;
+      padding: 3px 10px 3px 28px;
+      margin-top: 15px;
+      background-color: $baseThemeColor;
+      font-family: 'Philosopher', sans-serif;
+      color: white;
+      border-radius: 3px;
+
+      position: relative;
+
+      ins {
+        position: absolute;
+        top: 7px;
+        left: 7px;
+      }
+    }
+  }
+}
+
+.service {
+  background-color: #F0F7F2;
+  padding: 70px;
+}
