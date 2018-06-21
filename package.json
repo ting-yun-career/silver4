@@ -4,7 +4,7 @@
   "description": "",
   "main": "js/main.js",
   "scripts": {
-    "scss": "node_modules/.bin/node-sass scss/index.scss --output build --source-map true --source-map-contents --output-style compressed",
+    "scss": "node_modules/.bin/node-sass scss/index.scss --output build --source-map true --source-map-contents --output-style compact",
     "uglify": "node_modules/.bin/uglifyjs js/main.js -cmo build/main.min.js --source-map",
     "html": "cp index.html ./build",
     "asset": "cp -R asset/ ./build",
@@ -12,7 +12,7 @@
     "init": "mkdir -p build && touch build/main.min.js",
     "rebuild": "npm run clean && npm run init && npm run html && npm run uglify && npm run scss && npm run asset",
     "watch": "node_modules/.bin/onchange 'js/*.js' 'scss/*.scss' 'index.html' -p -i -- npm run rebuild",
-    "livereload": "node_modules/.bin/live-reload --port 9091 build/"
+    "livereload": "node_modules/.bin/live-reload -u --port 9091 -d build/"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +20,8 @@
   "devDependencies": {
     "node-sass": "^4.7.2",
     "onchange": "^3.3.0",
-    "uglify-js": "^3.3.16"
+    "uglify-js": "^3.3.16",
+    "live-reload": "latest"
   },
   "dependencies": {
     "animate.css": "^3.6.1"
