@@ -6,9 +6,7 @@
   "scripts": {
     "scss": "node_modules/.bin/node-sass scss/index.scss --output build --source-map true --source-map-contents --output-style compact",
     "uglify": "node_modules/.bin/uglifyjs js/main.js -cmo build/main.min.js --source-map",
-    "html": "cp index.html ./build",
-    "copy": "cp -R asset/ index.html scss/normalize.css ./build",
-    "asset": "cp -R asset/ ./build",
+    "copy": "cp -R asset/ index.html scss/normalize.css js/main.js ./build",
     "clean": "rm -rf build",
     "init": "mkdir -p build && touch build/main.min.js",
     "rebuild": "npm run clean && npm run init && npm run copy && npm run scss && npm run uglify",

@@ -1,0 +1,14 @@
+@mixin transition($duration: 1s, $timingFunction: ease-in-out) {
+  -webkit-transition:  -webkit-transform $duration $timingFunction;
+  -moz-transition: -moz-transform $duration $timingFunction;
+  -o-transition: -o-transform $duration $timingFunction;
+  -ms-transition: -ms-transform $duration $timingFunction;
+  transition: transform $duration $timingFunction;
+}
+
+@mixin scale($factor) {
+  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.2);
+  -o-transform:scale(1.2);
+  transform:scale(1.2);
+}
