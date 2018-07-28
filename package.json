@@ -12,7 +12,6 @@
     "init": "mkdir -p build && touch build/main.min.js",
     "rebuild": "npm run clean && npm run init && npm run html && npm run uglify && npm run scss && npm run asset",
     "watch": "node_modules/.bin/onchange 'js/*.js' 'scss/*.scss' 'index.html' -p -i -- npm run rebuild",
-    "livereload": "node_modules/.bin/live-reload -u --port 9091 -d build/"
   },
   "keywords": [],
   "author": "",
@@ -20,10 +19,9 @@
   "devDependencies": {
     "node-sass": "^4.7.2",
     "onchange": "^3.3.0",
-    "uglify-js": "^3.3.16",
-    "live-reload": "latest"
+    "uglify-js": "^3.3.16"
   },
   "dependencies": {
-    "animate.css": "^3.6.1"
+    "animate.css": "^3.6.1",
   }
 }
