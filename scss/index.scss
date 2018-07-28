@@ -1,5 +1,5 @@
 // https://www.npmjs.com/package/node-sass
-@import url("normalize");
+@import url(normalize.css);
 
 $baseThemeColor: #78BF8B;
 $baseTextColor: mix($baseThemeColor, #666, 20%);
