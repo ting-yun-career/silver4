@@ -17,10 +17,6 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.7.2",
-    "onchange": "^3.3.0",
     "uglify-js": "^3.3.16"
-  },
-  "dependencies": {
-    "animate.css": "^3.6.1"
   }
 }

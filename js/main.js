@@ -1,6 +1,6 @@
-$('.carousel').on('mouseenter', function(event) {
+$('.carousel_item').on('mouseenter', function(event) {
   $(event.target).addClass('active');
 });
-$('.carousel').on('mouseleave', function(event) {
+$('.carousel_item').on('mouseleave', function(event) {
   $(event.target).removeClass('active');
 });
