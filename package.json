@@ -10,7 +10,8 @@
     "clean": "rm -rf build",
     "init": "mkdir -p build && touch build/main.min.js",
     "rebuild": "npm run clean && npm run init && npm run copy && npm run scss && npm run uglify",
-    "watch": "node_modules/.bin/onchange 'js/*.js' 'scss/*.scss' 'index.html' -p -i -- npm run rebuild"
+    "watch": "node_modules/.bin/onchange 'js/*.js' 'scss/*.scss' 'index.html' -p -i -- npm run rebuild",
+    "reload": "reload -b -d build -n 127.0.0.1"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "node-sass": "^4.7.2",
     "onchange": "^4.1.0",
+    "reload": "^2.4.0",
     "uglify-js": "^3.3.16"
   }
 }
