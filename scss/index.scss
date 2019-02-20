@@ -76,6 +76,7 @@ header {
   font-family: $font2;
   font-size: 24px;
   color: darken($silver4, 20%);
+  background-image: url("pattern/white/dust_scratches.png");
 
   .title {
     font-size: 30px;
@@ -107,7 +108,7 @@ header {
 .service {
   @include center();
   flex-wrap: wrap;
-  background-image: url("pattern/warm/sakura.png");
+  background-image: url("pattern/dark/stardust_@2X.png");
   padding: 40px 0;
 
   .title, .content {
@@ -128,6 +129,7 @@ header {
   @include center();
   flex-wrap: wrap;
   padding: 40px 0;
+  background-image: url("pattern/white/dust_scratches.png");
 
   .title, .content {
     flex: 0 0 100%;
@@ -147,7 +149,7 @@ header {
   @include center();
   flex-wrap: wrap;
   padding: 40px 0;
-  background-image: url("pattern/white/dust_scratches.png");
+  background-image: url("pattern/dark/stardust_@2X.png");
 
   .title, .content {
     flex: 0 0 100%;
