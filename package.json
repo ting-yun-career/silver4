@@ -11,8 +11,7 @@
     "init": "mkdir -p build && touch build/main.min.js",
     "rebuild": "npm run clean && npm run init && npm run copy && npm run scss && npm run uglify",
     "watch": "node_modules/.bin/onchange 'js/*.js' 'scss/*.scss' 'index.html' -p -i -- npm run rebuild",
-    "reload": "reload -b -v -d build -w build -n 127.0.0.1",
-    "serve": "npm run watch & npm run reload"
+    "reload": "reload -b -v -d build -w build -n 127.0.0.1"
   },
   "keywords": [],
   "author": "",
