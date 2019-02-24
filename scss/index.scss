@@ -1,6 +1,7 @@
 // https://www.npmjs.com/package/node-sass
 @import 'mixin';
 @import url(normalize.css);
+@import url(../asset/icomoon/style.css);
 
 // https://www.color-hex.com/color-palette/72723
 $silver4: #AFC5D2;
@@ -128,7 +129,7 @@ header {
   @include center();
   flex-wrap: wrap;
   background-image: url("pattern/white/cross_scratches_@2X.png");
-  padding: 40px 0;
+  padding: 40px 0 80px 0;
 
   .title, .content {
     flex: 0 0 100%;
@@ -141,6 +142,27 @@ header {
   .content {
     padding-top: 40px;
     font-size: 20px;
+    @include center();
+  }
+
+  .service-list {
+    @include itemList();
+  }
+
+  .service-item {
+    @include item();
+  }
+
+  .service-sub-item {
+    @include subItem();
+  }
+
+  .service-sub-sub-item {
+    padding: 10px 0 5px 40px;
+
+    &.first{
+      padding-top: 20px;
+    }
   }
 }
 
@@ -161,6 +183,14 @@ header {
   .content {
     padding-top: 40px;
     font-size: 20px;
+  }
+
+  .hours-list {
+    @include itemList();
+  }
+
+  .hours-item {
+    @include item();
   }
 }
 
@@ -206,7 +236,55 @@ header {
     margin-top: 40px;
     font-size: 16px;
     height: 600px;
-    padding: 40px 0;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .staff {
+    flex: 1 0 auto;
+    @include center();
+  }
+  //.staff:nth-child(1) {
+  //  background-color: rgba(green, 0.1);
+  //}
+  //.staff:nth-child(2) {
+  //  background-color: rgba(orange, 0.1);
+  //}
+  //.staff:nth-child(3) {
+  //  background-color: rgba(red, 0.1);
+  //}
+
+  .avatar {
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    width: 400px;
+    height: 600px;
+    position: relative;
+    border-radius: 3px;
+
+    &:hover {
+      border: 1px solid #ddd;
+
+      .avatar-detail {
+        height: 100px;
+      }
+    }
+  }
+
+  .avatar-summary {
+    position: absolute;
+    bottom: 0; left: 0; right: 0; top: auto;
+    background-color: rgba(black, 0.2);
+    padding: 20px;
+    color: #eee;
+    font-family: $font1;
+    font-weight: 300;
+  }
+
+  .avatar-detail {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s;
   }
 }
 

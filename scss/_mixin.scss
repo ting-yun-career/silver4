@@ -32,3 +32,46 @@ $desktop: "only screen and (min-width: 1300px)";
     @content;
   }
 }
+
+@mixin itemList {
+  font-family: $font1;
+  font-weight: 300;
+  border: 2px solid white;
+  width: 350px;
+  border-radius: 3px;
+  background-color: rgba(50,50,60,0.1);
+  padding: 40px;
+
+  span, em {
+    float: right;
+  }
+
+  em {
+    float: right;
+    text-decoration: none;
+    font-style: normal;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '+';
+      left: 100%;
+    }
+  }
+}
+
+@mixin item {
+  padding-top: 20px;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+@mixin subItem {
+  padding: 10px 0 5px 20px;
+
+  &.first{
+    padding-top: 20px;
+  }
+}
