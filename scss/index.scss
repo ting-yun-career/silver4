@@ -222,7 +222,8 @@ header {
   @include center();
   flex-wrap: wrap;
   padding: 40px 0;
-  background-image: url("pattern/white/dust_scratches.png");
+  background-image: url("pattern/dark/fancy-cushion.png");
+  background-image: url("pattern/dark/dark-triangles.png");
 
   .title, .content {
     flex: 0 0 100%;
@@ -245,25 +246,25 @@ header {
     @include center();
   }
   //.staff:nth-child(1) {
-  //  background-color: rgba(green, 0.1);
   //}
   //.staff:nth-child(2) {
-  //  background-color: rgba(orange, 0.1);
   //}
   //.staff:nth-child(3) {
   //  background-color: rgba(red, 0.1);
   //}
 
   .avatar {
-    background-color: #fafafa;
-    border: 1px solid #ccc;
-    width: 400px;
-    height: 600px;
+    background-color: #333;
+    border: 1px solid #666;
+    width: 390px;
+    height: 535px;
     position: relative;
     border-radius: 3px;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     &:hover {
-      border: 1px solid #ddd;
+      border: 1px solid #777;
 
       .avatar-detail {
         height: 100px;
@@ -274,7 +275,7 @@ header {
   .avatar-summary {
     position: absolute;
     bottom: 0; left: 0; right: 0; top: auto;
-    background-color: rgba(black, 0.2);
+    background-color: rgba(black, 0.6);
     padding: 20px;
     color: #eee;
     font-family: $font1;
