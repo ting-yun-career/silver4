@@ -18,17 +18,28 @@
   align-items: center;
   justify-content: center;
 }
+$cell: "only screen and (max-width: 449px)";
+$tablet: "only screen and (min-width: 450px) and (max-width: 799px)";
+$desktop: "only screen and (min-width: 800px) and (max-width: 1299px)";
+$uhd: "only screen and (min-width: 1300px)";
 
-$mobile: "only screen and (max-width: 1299px)";
-$desktop: "only screen and (min-width: 1300px)";
-
-@mixin mobile {
-  @media #{$mobile} {
+@mixin cell {
+  @media #{$cell} {
+    @content;
+  }
+}
+@mixin tablet {
+  @media #{$tablet} {
     @content;
   }
 }
 @mixin desktop {
   @media #{$desktop} {
+    @content;
+  }
+}
+@mixin uhd {
+  @media #{$uhd} {
     @content;
   }
 }
@@ -41,6 +52,10 @@ $desktop: "only screen and (min-width: 1300px)";
   border-radius: 3px;
   background-color: rgba(50,50,60,0.1);
   padding: 40px;
+
+  @include cell() {
+    width: 100%;
+  }
 
   span, em {
     float: right;

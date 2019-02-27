@@ -39,10 +39,10 @@ html {
 }
 
 .english {
-  display: none;
 }
 
 .chinese {
+  display: none;
   font-family: 'DFKai-SB', 'STKaiti', serif;
 }
 
@@ -50,10 +50,16 @@ html {
   height: 100%;
   box-shadow: 0 0 8px 1px rgba(0,0,0,0.2);
   margin: 0 auto;
-  @include mobile {
+  @include cell {
+    width: 100%;
+  }
+  @include tablet {
     width: 100%;
   }
   @include desktop {
+    width: 100%;
+  }
+  @include uhd {
     width: 1270px;
   }
 }
@@ -71,6 +77,13 @@ header {
   background-color: #aaa;
   color: $color3;
 
+  @include cell {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+
   .carousel_item {
     height: 800px;
     width: 100%;
@@ -82,12 +95,13 @@ header {
   overflow: hidden;
   padding: 70px 0;
   text-align: center;
-  font-family: $font2;
   font-size: 24px;
+  font-family: $font1;
   color: $text;
   background-image: url("pattern/white/dust_scratches.png");
 
   .title {
+    font-family: $font2;
     font-size: 30px;
     font-weight: 700;
   }
@@ -105,18 +119,37 @@ header {
   .description {
     display: inline-block;
     width: 50%;
+    font-weight: 300;
 
     .short {
       font-size: 30px;
-      padding-bottom: 15px;
-      border-bottom: 1px dashed $text;
+      padding-bottom: 40px;
+
+      @include cell {
+        padding-bottom: 0;
+      }
+      @include tablet {
+        padding-bottom: 0;
+      }
 
       .chinese {
         font-size: 20px;
       }
     }
     .long {
-      padding-top: 10px;
+      padding-top: 40px;
+      border-top: 1px dashed $text;
+
+      @include cell {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+
+      .english {
+        font-size: 20px;
+      }
 
       .chinese {
         font-size: 20px;
@@ -130,6 +163,7 @@ header {
   flex-wrap: wrap;
   background-image: url("pattern/white/cross_scratches_@2X.png");
   padding: 40px 0 80px 0;
+
 
   .title, .content {
     flex: 0 0 100%;
@@ -147,6 +181,9 @@ header {
 
   .service-list {
     @include itemList();
+    @include cell {
+      border: none;
+    }
   }
 
   .service-item {
@@ -159,10 +196,6 @@ header {
 
   .service-sub-sub-item {
     padding: 10px 0 5px 40px;
-
-    &.first{
-      padding-top: 20px;
-    }
   }
 }
 
@@ -170,7 +203,12 @@ header {
   @include center();
   flex-wrap: wrap;
   padding: 40px 0;
-  background-image: url("pattern/white/dust_scratches.png");
+  //background-image: url('pattern/dark/dark-triangles.png');
+  background-image: url('pattern/dark/diagmonds.png');
+  //background-image: url('pattern/dark/fancy-cushion.png');
+  //background-image: url('pattern/dark/pinstriped_suit_@2X.png');
+  //background-image: url('pattern/dark/stardust_@2X.png');
+  //background-image: url('pattern/dark/starring_@2X.png');
 
   .title, .content {
     flex: 0 0 100%;
@@ -187,6 +225,10 @@ header {
 
   .hours-list {
     @include itemList();
+
+    @include cell {
+      border: none;
+    }
   }
 
   .hours-item {
@@ -222,8 +264,7 @@ header {
   @include center();
   flex-wrap: wrap;
   padding: 40px 0;
-  background-image: url("pattern/dark/fancy-cushion.png");
-  background-image: url("pattern/dark/dark-triangles.png");
+  background-image: url('pattern/dark/diagmonds.png');
 
   .title, .content {
     flex: 0 0 100%;
@@ -236,9 +277,15 @@ header {
   .content {
     margin-top: 40px;
     font-size: 16px;
-    height: 600px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: stretch;
+  }
+
+  @include cell {
+    display: none;
+  }
+  @include tablet {
+    display: none;
   }
 
   .staff {
@@ -257,11 +304,12 @@ header {
     background-color: #333;
     border: 1px solid #666;
     width: 390px;
-    height: 535px;
+    height: 528px;
     position: relative;
     border-radius: 3px;
     background-size: contain;
     background-repeat: no-repeat;
+    transition: border-color 0.3s;
 
     &:hover {
       border: 1px solid #777;
@@ -295,6 +343,12 @@ header {
   padding: 40px 0 80px 0;
   position: relative;
   background-image: url("pattern/white/cross_scratches_@2X.png");
+  @include cell {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
 
   .title, .content {
     flex: 0 0 100%;
