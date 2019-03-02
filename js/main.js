@@ -10,6 +10,11 @@ $(document).ready(function(){
     slider_transition_speed: 1500,
     gallery_autoplay: true,
     gallery_play_interval: 6000,
+    thumb_image_overlay_effect:true,
+    slider_progress_indicator_type: "pie2",
+    slider_enable_fullscreen_button: false,
+    slider_control_zoom: false,
+    slider_enable_zoom_panel: false,
   });
   $("#thumbnail-container").unitegallery({
     gallery_width: 900,
