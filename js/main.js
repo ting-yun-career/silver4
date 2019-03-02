@@ -1,3 +1,6 @@
 $(document).ready(function(){
-  $("#gallery").unitegallery();
+  $("#thumbnail-container").unitegallery({
+    gallery_width: 900,
+    gallery_min_width: '80%'
+  });
 });
