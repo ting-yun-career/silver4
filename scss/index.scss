@@ -1,7 +1,5 @@
 // https://www.npmjs.com/package/node-sass
 @import 'mixin';
-@import url(normalize.css);
-@import url(../asset/icomoon/style.css);
 
 // https://www.color-hex.com/color-palette/72723
 $silver4: #AFC5D2;
@@ -98,7 +96,7 @@ header {
   font-size: 24px;
   font-family: $font1;
   color: $text;
-  background-image: url("pattern/white/dust_scratches.png");
+  background-image: url("../asset/pattern/white/dust_scratches.png");
 
   .title {
     font-family: $font2;
@@ -161,7 +159,7 @@ header {
 .service {
   @include center();
   flex-wrap: wrap;
-  background-image: url("pattern/white/cross_scratches_@2X.png");
+  background-image: url("../asset/pattern/white/cross_scratches_@2X.png");
   padding: 40px 0 80px 0;
 
 
@@ -204,7 +202,7 @@ header {
   flex-wrap: wrap;
   padding: 40px 0;
   //background-image: url('pattern/dark/dark-triangles.png');
-  background-image: url('pattern/dark/diagmonds.png');
+  background-image: url("../asset/pattern/dark/diagmonds.png");
   //background-image: url('pattern/dark/fancy-cushion.png');
   //background-image: url('pattern/dark/pinstriped_suit_@2X.png');
   //background-image: url('pattern/dark/stardust_@2X.png');
@@ -240,7 +238,7 @@ header {
   @include center();
   flex-wrap: wrap;
   padding-top: 40px;
-  background-image: url("pattern/white/cross_scratches_@2X.png");
+  background-image: url("../asset/pattern/white/cross_scratches_@2X.png");
 
   .title, .content {
     flex: 0 0 100%;
@@ -264,7 +262,7 @@ header {
   @include center();
   flex-wrap: wrap;
   padding: 40px 0;
-  background-image: url('pattern/dark/diagmonds.png');
+  background-image: url('../asset/pattern/dark/diagmonds.png');
 
   .title, .content {
     flex: 0 0 100%;
@@ -342,7 +340,7 @@ header {
   flex-wrap: wrap;
   padding: 40px 0 80px 0;
   position: relative;
-  background-image: url("pattern/white/cross_scratches_@2X.png");
+  background-image: url("../asset/pattern/white/cross_scratches_@2X.png");
   @include cell {
     display: none;
   }
@@ -372,7 +370,7 @@ header {
 
 footer {
   height: 100px;
-  background-image: url("pattern/dark/diagmonds.png");
+  background-image: url("../asset/pattern/dark/diagmonds.png");
   color: $color1;
   @include center();
 }

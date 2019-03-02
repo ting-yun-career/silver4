@@ -4,12 +4,15 @@
   "description": "",
   "main": "js/main.js",
   "scripts": {
-    "scss": "node_modules/.bin/node-sass scss/index.scss --output build --source-map true --source-map-contents --output-style compact",
-    "uglify": "node_modules/.bin/uglifyjs js/main.js -cmo build/main.min.js --source-map",
-    "copy": "cp -R asset/ index.html scss/normalize.css js/main.js ./build",
+    "scss": "node_modules/.bin/node-sass scss/index.scss --output build/css --source-map true --source-map-contents --output-style compact",
+    "copy-index": "cp -R index.html ./build",
+    "copy-css": "cp scss/normalize.css ./build/css/",
+    "copy-js": "cp -R js/ ./build/js",
+    "copy-asset": "cp -R asset/ ./build/asset",
+    "copy-all": "npm run copy-index && npm run copy-css && npm run copy-js && npm run copy-asset",
     "clean": "rm -rf build",
-    "init": "mkdir -p build && touch build/main.min.js",
-    "rebuild": "npm run clean && npm run init && npm run copy && npm run scss && npm run uglify",
+    "init": "mkdir -p build && mkdir -p build/css",
+    "rebuild": "npm run clean && npm run init && npm run copy-all && npm run scss",
     "watch": "node_modules/.bin/onchange 'js/*.js' 'scss/*.scss' 'index.html' -p -i -- npm run rebuild",
     "reload": "reload -b -v -d build -w build -n 127.0.0.1"
   },
@@ -19,7 +22,6 @@
   "devDependencies": {
     "node-sass": "^4.7.2",
     "onchange": "^4.1.0",
-    "reload": "^2.4.0",
-    "uglify-js": "^3.3.16"
+    "reload": "^2.4.0"
   }
 }
