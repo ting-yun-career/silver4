@@ -66,7 +66,17 @@ header {
   background-color: $color4;
   padding: 15px 40px;
   color: $text;
-  border-bottom: 1px solid darken($color4, 20%)
+  border-bottom: 1px solid darken($color4, 20%);
+  display: flow-root; // clearfix
+  font-family: $font1;
+
+  span:nth-child(1) {
+    float: left;
+  }
+
+  span:nth-child(2) {
+    float: right;
+  }
 }
 
 .carousel {
@@ -96,7 +106,7 @@ header {
   font-size: 24px;
   font-family: $font1;
   color: $text;
-  background-image: url("../asset/pattern/white/dust_scratches.png");
+  background-image: url("../asset/pattern/dark/diagmonds.png");
 
   .title {
     font-family: $font2;
@@ -237,7 +247,7 @@ header {
 .location {
   @include center();
   flex-wrap: wrap;
-  padding-top: 40px;
+  padding: 40px 0;
   background-image: url("../asset/pattern/white/cross_scratches_@2X.png");
 
   .title, .content {
@@ -250,11 +260,15 @@ header {
   }
   .content {
     height: 600px;
-    margin-top: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
 
-    background-color: #ddd;
     color: $text;
     font-size: 16px;
+  }
+  .parking {
+    flex: 0 0 auto;
+    padding-bottom: 20px;
   }
 }
 
@@ -360,5 +374,6 @@ footer {
   height: 100px;
   background-image: url("../asset/pattern/dark/diagmonds.png");
   color: $color1;
+  font-family: $font1;
   @include center();
 }
