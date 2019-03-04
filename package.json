@@ -9,9 +9,11 @@
     "copy-css": "cp scss/normalize.css ./build/css/",
     "copy-js": "cp -R js/ ./build/js",
     "copy-asset": "cp -R asset/ ./build/asset",
-    "copy-all": "npm run copy-index && npm run copy-css && npm run copy-js && npm run copy-asset",
+    "copy-unite-gallery": "cp -R vendor/unitegallery/dist ./build/vendor/unitegallery",
+    "copy-vendor": "npm run copy-unite-gallery",
+    "copy-all": "npm run copy-index && npm run copy-css && npm run copy-js && npm run copy-asset && npm run copy-vendor",
     "clean": "rm -rf build",
-    "init": "mkdir -p build && mkdir -p build/css",
+    "init": "mkdir -p build/css && mkdir -p build/vendor/unitegallery/dist",
     "rebuild": "npm run clean && npm run init && npm run copy-all && npm run scss",
     "watch": "node_modules/.bin/onchange 'js/*.js' 'scss/*.scss' 'index.html' -p -i -- npm run rebuild",
     "reload": "reload -b -v -d build -w build -n 127.0.0.1"
