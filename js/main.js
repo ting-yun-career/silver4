@@ -20,5 +20,6 @@ $(document).ready(function(){
     gallery_width: 900,
     gallery_min_width: '80%',
     gallery_theme: 'tiles',
+    lightbox_type: 'compact',
   });
 });
