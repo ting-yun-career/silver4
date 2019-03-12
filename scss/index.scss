@@ -307,13 +307,6 @@ header {
     align-items: stretch;
   }
 
-  @include cell {
-    display: none;
-  }
-  @include tablet {
-    display: none;
-  }
-
   .staff {
     flex: 1 0 auto;
     @include center();
