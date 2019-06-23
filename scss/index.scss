@@ -302,7 +302,11 @@ header {
     flex-wrap: wrap;
     align-items: stretch;
   }
-
+  .row {
+    @include center();
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+  }
   .staff {
     flex: 1 0 auto;
     @include center();
@@ -318,8 +322,8 @@ header {
   .avatar {
     background-color: #333;
     border: 1px solid #666;
-    width: 390px;
-    height: 528px;
+    width: 400px;
+    height: 400px;
     position: relative;
     border-radius: 3px;
     background-size: contain;
