@@ -69,6 +69,13 @@ header {
   border-bottom: 1px solid darken($color4, 20%);
   display: flow-root; // clearfix
   font-family: $font1;
+  width: 100%;
+  box-sizing: border-box;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
   span:nth-child(1) {
     float: left;
@@ -121,6 +128,7 @@ header {
   font-family: $font1;
   color: $text;
   background-image: url("../asset/pattern/dark/diagmonds.png");
+  width: 100%;
 
   .title {
     font-family: $font2;
