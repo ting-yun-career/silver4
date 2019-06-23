@@ -233,12 +233,7 @@ header {
   @include center();
   flex-wrap: wrap;
   padding: 40px 0;
-  //background-image: url('pattern/dark/dark-triangles.png');
   background-image: url("../asset/pattern/dark/diagmonds.png");
-  //background-image: url('pattern/dark/fancy-cushion.png');
-  //background-image: url('pattern/dark/pinstriped_suit_@2X.png');
-  //background-image: url('pattern/dark/stardust_@2X.png');
-  //background-image: url('pattern/dark/starring_@2X.png');
 
   .title, .content {
     flex: 0 0 100%;
@@ -316,7 +311,7 @@ header {
     flex-wrap: wrap;
   }
   .staff {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
     @include center();
   }
   //.staff:nth-child(1) {
