@@ -22,4 +22,13 @@ $(document).ready(function(){
     gallery_theme: 'tiles',
     lightbox_type: 'compact',
   });
+  $.featherlight($('#reopen-announcement'), {});
+
+  $('.client-experience-trigger').on('click', function() {
+    $.featherlight($('#client-experience'), {});
+  });
+
+  $('.working-guideline-trigger').on('click', function() {
+    $.featherlight($('#working-guideline'), {});
+  });
 });

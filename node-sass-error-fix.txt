@@ -1,0 +1,5 @@
+To recover from node-sass error (unsupported version on system), check
+
+https://github.com/sass/node-sass/releases/
+
+to find a matching node version and run npm rebuild node-sass or npm i to reinstall everything

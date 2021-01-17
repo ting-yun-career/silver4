@@ -90,3 +90,12 @@ $uhd: "only screen and (min-width: 1300px)";
     padding-top: 20px;
   }
 }
+
+@mixin clearfix {
+  display: flow-root; // clearfix
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
