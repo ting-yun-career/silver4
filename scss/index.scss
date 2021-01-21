@@ -397,19 +397,11 @@ footer {
   background-image: url("../asset/pattern/dark/diagmonds.png");
   color: $color1;
   font-family: $font1;
-  display: flex;
-
-  .disclaimer {
-    flex: 1 1 auto;
-    @include center();
-    line-height: 1.5;
-  }
 
   .footer-links {
-    flex: 0 0 100%;
-    max-width: 180px;
-    flex-wrap: wrap;
-    @include center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .footer-link {
       color: #449fdb;
@@ -421,6 +413,12 @@ footer {
         color: #cccccc;
       }
     }
+  }
+
+  .disclaimer {
+    margin-top: 10px;
+    @include center();
+    line-height: 1.5;
   }
 }
 
